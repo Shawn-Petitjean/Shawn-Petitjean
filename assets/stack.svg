@@ -13,14 +13,14 @@
   </defs>
   <rect width="1200" height="220" fill="#0A0A0A"/>
   <rect x="8" y="8" width="1184" height="204" fill="#111" stroke="#2A2A2A"/>
-  <rect x="8" y="8" width="180" height="34" fill="#B4FF00"/>
+  <rect x="8" y="8" width="180" height="34" fill="#FFB3D9"/>
   <text x="22" y="31" class="mono" font-size="15" font-weight="700" fill="#0A0A0A">// STACK.SYS</text>
   <text x="1176" y="31" class="mono" font-size="12" fill="#777" text-anchor="end">MODULES LOADED: 06</text>
 
   <!-- module cards -->
   <g class="mono">
     <!-- C (primary, lime) -->
-    <rect x="36" y="64" width="170" height="124" fill="#B4FF00"/>
+    <rect x="36" y="64" width="170" height="124" fill="#FFB3D9"/>
     <text x="52" y="86" font-size="11" fill="#0A0A0A">MOD_01</text>
     <text x="52" y="150" class="sans" font-size="64" font-weight="700" fill="#0A0A0A">C</text>
     <text x="52" y="176" font-size="11" fill="#0A0A0A">PRIMARY · LOW-LEVEL</text>
@@ -47,10 +47,10 @@
       <text x="424" y="146">Shell</text><text x="610" y="146">Git</text>
       <text x="796" y="146">Make</text><text x="982" y="146">Linux</text>
     </g>
-    <g font-size="11" fill="#B4FF00">
+    <g font-size="11" fill="#FFB3D9">
       <text x="424" y="176">BASH · ZSH</text><text x="610" y="176">VERSION CTRL</text>
       <text x="796" y="176">BUILD SYS</text><text x="982" y="176">UNIX · POSIX</text>
     </g>
-    <path d="M1140 72 v16 M1132 80 h16" stroke="#B4FF00" stroke-width="1.5"/>
+    <path d="M1140 72 v16 M1132 80 h16" stroke="#FFB3D9" stroke-width="1.5"/>
   </g>
 </svg>
