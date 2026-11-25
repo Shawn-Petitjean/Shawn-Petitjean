@@ -1,16 +1,20 @@
 ## Hi there 👋
 
-<!--
-**Shawn-Petitjean/Shawn-Petitjean** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Salut, moi c'est Shawn Petitjean 👋
 
-Here are some ideas to get you started:
+Étudiant à **42**, je suis passé du rush en cuisine (fast-food & point chaud) au terminal. Aujourd'hui, je mets ma rigueur et ma gestion du stress au service du code.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 💻 Ma stack actuelle
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
+### 🚀 En ce moment
+- 🎓 En plein cursus à l'école **42**
+- 🔧 Je travaille sur des projets en **C** et **Python**
+- 🌱 J'apprends les bases solides du bas niveau et de l'algorithmique
+
+### 📫 Me contacter
+- **LinkedIn :** [Ton lien LinkedIn](https://linkedin.com)
+- **Email :** ton.email@exemple.com
