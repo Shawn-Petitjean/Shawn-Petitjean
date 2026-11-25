@@ -1,12 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330">
   <defs>
+    <filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="330">
+      <feFlood flood-color="#8CFFE6" flood-opacity="0.8" result="c"/>
+      <feComposite in="c" in2="SourceAlpha" operator="in" result="colored"/>
+      <feGaussianBlur in="colored" stdDeviation="4.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     <pattern id="stripes" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="12" height="12" fill="#141414"/><rect width="4" height="12" fill="#222"/>
     </pattern>
     <path id="spark" d="M0,-18 C2,-3 3,-2 18,0 C3,2 2,3 0,18 C-2,3 -3,2 -18,0 C-3,-2 -2,-3 0,-18Z"/>
     <clipPath id="screen"><rect x="20" y="50" width="1160" height="266"/></clipPath>
     <style>
-      .mono{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'Courier New',monospace}
+      .mono{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'Courier New',monospace;font-weight:500}
       .l{opacity:0;animation:in .01s linear forwards}
       @keyframes in{to{opacity:1}}
       .l1{animation-delay:.3s}.l2{animation-delay:.9s}.l3{animation-delay:1.5s}.l4{animation-delay:2.1s}
@@ -19,25 +28,25 @@
   <rect x="8" y="8" width="1184" height="314" fill="#111" stroke="#2A2A2A"/>
 
   <!-- tab -->
-  <rect x="8" y="8" width="200" height="34" fill="#FFB3D9"/>
+  <rect x="8" y="8" width="200" height="34" fill="#2EF2C9" filter="url(#glow)"/>
   <text x="22" y="31" class="mono" font-size="15" font-weight="700" fill="#0A0A0A">// TERMINAL.TTY</text>
   <rect x="208" y="8" width="984" height="34" fill="url(#stripes)"/>
   <text x="1176" y="31" class="mono" font-size="12" fill="#777" text-anchor="end">shawn@42perpignan:~</text>
-  <use href="#spark" x="1150" y="290" fill="#FFB3D9"/>
+  <use href="#spark" x="1150" y="290" fill="#2EF2C9" filter="url(#glow)"/>
   <path d="M1150 42 V266" stroke="#2A2A2A"/>
 
   <g class="mono" font-size="17" xml:space="preserve" clip-path="url(#screen)">
-    <text x="36" y="84" class="l l1"><tspan fill="#FFB3D9">&gt;</tspan><tspan fill="#E8E8E8"> whoami</tspan></text>
+    <text x="36" y="84" class="l l1"><tspan fill="#2EF2C9">&gt;</tspan><tspan fill="#E8E8E8"> whoami</tspan></text>
     <text x="36" y="112" class="l l2" fill="#C8C8C8">  shawn_petitjean <tspan fill="#777">::</tspan> student @ 42 Perpignan</text>
 
-    <text x="36" y="152" class="l l3"><tspan fill="#FFB3D9">&gt;</tspan><tspan fill="#E8E8E8"> cat role.txt</tspan></text>
-    <text x="36" y="180" class="l l4" fill="#C8C8C8">  <tspan fill="#FFB3D9" font-weight="700">Président du BDE</tspan> de 42 Perpignan — events, community &amp; student life.</text>
+    <text x="36" y="152" class="l l3"><tspan fill="#2EF2C9">&gt;</tspan><tspan fill="#E8E8E8"> cat role.txt</tspan></text>
+    <text x="36" y="180" class="l l4" fill="#C8C8C8">  <tspan fill="#2EF2C9" font-weight="800">Président du BDE</tspan> de 42 Perpignan — events, community &amp; student life.</text>
 
-    <text x="36" y="220" class="l l5"><tspan fill="#FFB3D9">&gt;</tspan><tspan fill="#E8E8E8"> cat mission.txt</tspan></text>
+    <text x="36" y="220" class="l l5"><tspan fill="#2EF2C9">&gt;</tspan><tspan fill="#E8E8E8"> cat mission.txt</tspan></text>
     <text x="36" y="248" class="l l6" fill="#C8C8C8">  Ex-fast-food &amp; Point Chaud. Now compiling my way to software engineering.</text>
-    <text x="36" y="274" class="l l7" fill="#C8C8C8">  Building things in <tspan fill="#FFB3D9" font-weight="700">Python</tspan>, learning C at 42, breaking &amp; fixing things.</text>
+    <text x="36" y="274" class="l l7" fill="#C8C8C8">  Building things in <tspan fill="#2EF2C9" font-weight="800">Python</tspan>, learning C at 42, breaking &amp; fixing things.</text>
 
-    <text x="36" y="306" class="l l8" fill="#FFB3D9">&gt;</text>
-    <rect x="56" y="292" width="11" height="18" fill="#FFB3D9" class="blink"/>
+    <text x="36" y="306" class="l l8" fill="#2EF2C9">&gt;</text>
+    <rect x="56" y="292" width="11" height="18" fill="#2EF2C9" class="blink" filter="url(#glow)"/>
   </g>
 </svg>

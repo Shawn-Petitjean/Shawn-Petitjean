@@ -6,21 +6,30 @@
       <feComponentTransfer><feFuncA type="table" tableValues="0 0.35"/></feComponentTransfer>
       <feComposite in2="SourceGraphic" operator="in"/>
     </filter>
+    <filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="220">
+      <feFlood flood-color="#8CFFE6" flood-opacity="0.8" result="c"/>
+      <feComposite in="c" in2="SourceAlpha" operator="in" result="colored"/>
+      <feGaussianBlur in="colored" stdDeviation="5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     <style>
-      .mono{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'Courier New',monospace}
-      .sans{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+      .mono{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'Courier New',monospace;font-weight:500}
+      .sans{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500}
     </style>
   </defs>
   <rect width="1200" height="220" fill="#0A0A0A"/>
   <rect x="8" y="8" width="1184" height="204" fill="#111" stroke="#2A2A2A"/>
-  <rect x="8" y="8" width="180" height="34" fill="#FFB3D9"/>
+  <rect x="8" y="8" width="180" height="34" fill="#2EF2C9" filter="url(#glow)"/>
   <text x="22" y="31" class="mono" font-size="15" font-weight="700" fill="#0A0A0A">// STACK.SYS</text>
   <text x="1176" y="31" class="mono" font-size="12" fill="#777" text-anchor="end">MODULES LOADED: 05 · MAIN: PYTHON</text>
 
   <!-- module cards -->
   <g class="mono">
-    <!-- PYTHON (primary, big pink card) -->
-    <rect x="36" y="64" width="356" height="124" fill="#FFB3D9"/>
+    <!-- PYTHON (primary, big polar blue card) -->
+    <rect x="36" y="64" width="356" height="124" fill="#2EF2C9" filter="url(#glow)"/>
     <text x="52" y="86" font-size="11" fill="#0A0A0A">MOD_01 · MAIN_LANG</text>
     <text x="376" y="86" font-size="11" fill="#0A0A0A" text-anchor="end">★★★★★</text>
     <text x="50" y="152" class="sans" font-size="62" font-weight="700" fill="#0A0A0A" letter-spacing="-1">Python</text>
@@ -46,9 +55,9 @@
     <g class="sans" font-size="34" font-weight="700" fill="#E8E8E8">
       <text x="610" y="146">Shell</text><text x="796" y="146">Git</text><text x="982" y="146">Linux</text>
     </g>
-    <g font-size="11" fill="#FFB3D9">
+    <g font-size="11" fill="#2EF2C9">
       <text x="610" y="176">BASH · ZSH</text><text x="796" y="176">VERSION CTRL</text><text x="982" y="176">UNIX · MAKE</text>
     </g>
-    <path d="M1140 72 v16 M1132 80 h16" stroke="#FFB3D9" stroke-width="1.5"/>
+    <path d="M1140 72 v16 M1132 80 h16" stroke="#2EF2C9" stroke-width="1.5" filter="url(#glow)"/>
   </g>
 </svg>

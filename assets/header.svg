@@ -6,6 +6,30 @@
       <feComponentTransfer><feFuncA type="table" tableValues="0 0.35"/></feComponentTransfer>
       <feComposite in2="SourceGraphic" operator="in"/>
     </filter>
+    <filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="620">
+      <feFlood flood-color="#8CFFE6" flood-opacity="0.9" result="c"/>
+      <feComposite in="c" in2="SourceAlpha" operator="in" result="colored"/>
+      <feGaussianBlur in="colored" stdDeviation="4.5" result="b1"/>
+      <feGaussianBlur in="colored" stdDeviation="11" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-soft" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="620">
+      <feFlood flood-color="#8CFFE6" flood-opacity="0.75" result="c"/>
+      <feComposite in="c" in2="SourceAlpha" operator="in" result="colored"/>
+      <feGaussianBlur in="colored" stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8CFFE6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8CFFE6" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="stripes" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="14" height="14" fill="#141414"/>
       <rect width="5" height="14" fill="#1E1E1E"/>
@@ -16,8 +40,8 @@
     </pattern>
     <path id="spark" d="M0,-40 C3,-7 7,-3 40,0 C7,3 3,7 0,40 C-3,7 -7,3 -40,0 C-7,-3 -3,-7 0,-40Z"/>
     <style>
-      .mono{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'Courier New',monospace}
-      .sans{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+      .mono{font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,'Courier New',monospace;font-weight:500}
+      .sans{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500}
       .blink{animation:b 1.2s steps(1) infinite}
       @keyframes b{50%{opacity:0}}
       .pulse{animation:p 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
@@ -33,11 +57,11 @@
 
   <!-- left column blocks -->
   <rect x="16" y="16" width="70" height="70" fill="#4A4A4A"/>
-  <rect x="86" y="16" width="70" height="70" fill="#FFB3D9"/>
+  <rect x="86" y="16" width="70" height="70" fill="#2EF2C9" filter="url(#glow-soft)"/>
   <rect x="108" y="38" width="26" height="26" fill="#0A0A0A"/>
   <rect x="16" y="86" width="250" height="90" fill="#1C1C1C"/>
   <text x="30" y="106" class="mono" font-size="11" fill="#9A9A9A">42</text>
-  <path d="M130 130h16M138 122v16" stroke="#FFB3D9" stroke-width="1.5"/>
+  <path d="M130 130h16M138 122v16" stroke="#2EF2C9" stroke-width="1.5"/>
   <rect x="16" y="176" width="60" height="120" fill="url(#stripes)"/>
 
   <!-- grey grain panel (bottom left) -->
@@ -53,24 +77,24 @@
     <circle cx="292" cy="360" r="5"/><circle cx="304" cy="360" r="5"/><circle cx="292" cy="372" r="5"/><circle cx="304" cy="372" r="5"/>
     <circle cx="344" cy="372" r="5"/><circle cx="356" cy="360" r="5"/><circle cx="356" cy="372" r="5"/>
   </g>
-  <text x="308" y="440" class="mono" font-size="12" fill="#FFB3D9">N</text>
-  <text x="308" y="520" class="mono" font-size="11" fill="#FFB3D9">ELEV</text>
-  <text x="314" y="534" class="mono" font-size="11" fill="#FFB3D9">42</text>
-  <text x="240" y="534" class="mono" font-size="11" fill="#FFB3D9">W</text>
-  <text x="404" y="534" class="mono" font-size="11" fill="#FFB3D9">E</text>
+  <text x="308" y="440" class="mono" font-size="12" fill="#2EF2C9">N</text>
+  <text x="308" y="520" class="mono" font-size="11" fill="#2EF2C9">ELEV</text>
+  <text x="314" y="534" class="mono" font-size="11" fill="#2EF2C9">42</text>
+  <text x="240" y="534" class="mono" font-size="11" fill="#2EF2C9">W</text>
+  <text x="404" y="534" class="mono" font-size="11" fill="#2EF2C9">E</text>
 
   <!-- "altitude" stack list -->
   <g class="mono" fill="#E8E8E8">
     <text x="110" y="214" font-size="13" font-style="italic">Main</text>
-    <text x="110" y="230" font-size="13" fill="#FFB3D9">Python · scripts</text>
+    <text x="110" y="230" font-size="13" fill="#2EF2C9">Python · scripts</text>
     <text x="110" y="270" font-size="13" font-style="italic">Core</text>
     <text x="110" y="286" font-size="13">C · Bash · Unix</text>
     <text x="170" y="430" font-size="13" font-style="italic" fill="#222">Kernel</text>
     <text x="170" y="446" font-size="13" fill="#222">malloc · fork</text>
   </g>
 
-  <!-- lime structure lines -->
-  <g stroke="#FFB3D9" stroke-width="2" fill="none">
+  <!-- polar blue structure lines -->
+  <g stroke="#2EF2C9" stroke-width="2" fill="none" filter="url(#glow-soft)">
     <path d="M300 16 V604"/>
     <path d="M250 150 V330"/>
     <path d="M16 330 H436"/>
@@ -80,7 +104,7 @@
   </g>
 
   <!-- sparkles -->
-  <g fill="#FFB3D9">
+  <g fill="#2EF2C9" filter="url(#glow)">
     <use href="#spark" x="250" y="160" class="pulse"/>
     <use href="#spark" x="300" y="330" transform="translate(300 330) scale(1.2) translate(-300 -330)"/>
     <use href="#spark" x="146" y="386" transform="translate(146 386) scale(.9) translate(-146 -386)"/>
@@ -93,9 +117,9 @@
     <circle cx="330" cy="110" r="70"/><circle cx="330" cy="110" r="110"/>
   </g>
   <g class="mono" font-size="13" fill="#8A8A8A" text-anchor="end">
-    <text x="590" y="60">Main lang:<tspan fill="#FFB3D9" dx="14">Python 3</tspan></text>
+    <text x="590" y="60">Main lang:<tspan fill="#2EF2C9" dx="14">Python 3</tspan></text>
     <text x="590" y="110">Origin:<tspan fill="#C8C8C8" dx="14">Fast-food &amp; Point Chaud</tspan></text>
-    <text x="590" y="146">Role:<tspan fill="#FFB3D9" dx="14">Président du BDE</tspan></text>
+    <text x="590" y="146">Role:<tspan fill="#2EF2C9" dx="14">Président du BDE</tspan></text>
     <text x="590" y="210">Goal:<tspan fill="#C8C8C8" dx="14">"Turning segfaults into</tspan></text>
     <text x="590" y="228" fill="#C8C8C8">software engineering."</text>
     <text x="590" y="256" fill="#8A8A8A">— Shawn, 42 Perpignan</text>
@@ -106,7 +130,8 @@
   <rect x="620" y="16" width="564" height="460" fill="#555" opacity=".35" filter="url(#grain)"/>
   <text x="1168" y="40" class="mono" font-size="12" fill="#E8E8E8" text-anchor="end">42: "SHAWN-PETITJEAN"</text>
   <!-- HUD target -->
-  <g transform="translate(960 220)" stroke="#FFB3D9" fill="none" stroke-width="1.5">
+  <circle cx="960" cy="220" r="180" fill="url(#ambient)"/>
+  <g transform="translate(960 220)" stroke="#2EF2C9" fill="none" stroke-width="1.5" filter="url(#glow-soft)">
     <circle r="110" stroke="#3A3A3A"/>
     <circle r="78" stroke-dasharray="4 8" class="spin"/>
     <path d="M-130 0 H-40 M40 0 H130 M0 -130 V-40 M0 40 V130"/>
@@ -114,7 +139,7 @@
     <path d="M-60 60 H60" stroke="#666"/>
     <path d="M-60 54 v12 M-40 57 v6 M-20 57 v6 M0 54 v12 M20 57 v6 M40 57 v6 M60 54 v12" stroke="#666"/>
   </g>
-  <g class="mono" font-size="11" fill="#FFB3D9">
+  <g class="mono" font-size="11" fill="#2EF2C9">
     <text x="840" y="140">213</text>
     <text x="1050" y="200">ELEV</text><text x="1056" y="214">42</text>
     <text x="1050" y="250">SP</text><text x="1050" y="264">4.2</text>
@@ -123,8 +148,8 @@
   </g>
 
   <!-- TITLE -->
-  <text x="340" y="370" class="mono" font-size="20" fill="#C8C8C8">2024 - ∞  <tspan fill="#FFB3D9">✦✦✦</tspan></text>
-  <text x="336" y="440" class="sans" font-size="76" font-weight="300" fill="#FFB3D9" letter-spacing="10" textLength="820" lengthAdjust="spacingAndGlyphs">SHAWN PETITJEAN</text>
+  <text x="340" y="370" class="mono" font-size="20" fill="#C8C8C8">2024 - ∞  <tspan fill="#2EF2C9">✦✦✦</tspan></text>
+  <text x="336" y="440" class="sans" font-size="76" font-weight="600" fill="#2EF2C9" letter-spacing="8" textLength="820" lengthAdjust="spacingAndGlyphs" filter="url(#glow)">SHAWN PETITJEAN</text>
   <g fill="#666">
     <circle cx="344" cy="462" r="3"/><circle cx="354" cy="462" r="3"/><circle cx="344" cy="472" r="3"/>
     <circle cx="378" cy="462" r="3"/><circle cx="388" cy="472" r="3"/><circle cx="412" cy="462" r="3"/>
@@ -135,8 +160,8 @@
   <text x="340" y="510" class="sans" font-size="22" fill="#D0D0D0" letter-spacing="1">42 PERPIGNAN · PRÉSIDENT DU BDE</text>
   <text x="340" y="538" class="sans" font-size="22" fill="#D0D0D0" letter-spacing="1">SOFTWARE ENGINEERING TRAJECTORY</text>
 
-  <!-- bottom right lime card -->
-  <rect x="900" y="500" width="250" height="88" rx="4" fill="#FFB3D9"/>
+  <!-- bottom right polar blue card -->
+  <rect x="900" y="500" width="250" height="88" rx="4" fill="#2EF2C9" filter="url(#glow-soft)"/>
   <g transform="translate(940 544)" fill="none" stroke="#0A0A0A" stroke-width="3">
     <circle r="24"/><circle r="15"/><circle r="6" fill="#0A0A0A"/>
   </g>
@@ -155,8 +180,8 @@
   <rect x="1124" y="568" width="10" height="12" fill="#0A0A0A" class="blink"/>
 
   <!-- tags -->
-  <rect x="620" y="574" width="62" height="16" fill="#FFB3D9"/>
+  <rect x="620" y="574" width="62" height="16" fill="#2EF2C9"/>
   <text x="651" y="586" class="mono" font-size="10" font-weight="700" fill="#0A0A0A" text-anchor="middle">BLOCK B</text>
   <text x="700" y="586" class="mono" font-size="11" fill="#777">STATUS: ACTIVE  →  0.42%</text>
-  <path d="M878 560 v20 M868 570 h20" stroke="#FFB3D9" stroke-width="1.5"/>
+  <path d="M878 560 v20 M868 570 h20" stroke="#2EF2C9" stroke-width="1.5"/>
 </svg>
