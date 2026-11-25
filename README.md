@@ -1,20 +1,12 @@
-## Hi there 👋
+<div align="center">
 
-# Salut, moi c'est Shawn Petitjean 👋
+<!-- BANNIÈRE STYLE TÉLÉMÉTRIE / ACID GRAPHICS -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0A0A0A&height=120&section=header&text=ID:%20[TON_PSEUDO]&fontSize=42&fontColor=B4FF00&fontAlignY=50&desc=42%20STUDENT%20✦%20C%20/%20PYTHON%20✦%20SYSTEM%20ONLINE&descAlignY=78&descColor=888888" width="100%"/>
 
-Étudiant à **42**, je suis passé du rush en cuisine (fast-food & point chaud) au terminal. Aujourd'hui, je mets ma rigueur et ma gestion du stress au service du code.
+</div>
 
-### 💻 Ma stack actuelle
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-
-### 🚀 En ce moment
-- 🎓 En plein cursus à l'école **42**
-- 🔧 Je travaille sur des projets en **C** et **Python**
-- 🌱 J'apprends les bases solides du bas niveau et de l'algorithmique
-
-### 📫 Me contacter
-- **LinkedIn :** [Ton lien LinkedIn](https://linkedin.com)
-- **Email :** ton.email@exemple.com
+```text
++------------------------------------------------------------------------------+
+|  STATUS: [ ACTIVE ]        LOC: 42_CAMPUS        ELEV: 42        SEC: BLOCK_B|
+|  ORIGIN: FAST-FOOD & POINT CHAUD  --->  TARGET: SOFTWARE ENGINEERING         |
++------------------------------------------------------------------------------+
