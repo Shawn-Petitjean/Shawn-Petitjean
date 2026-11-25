@@ -8,23 +8,12 @@
 <!-- ═══════════════ TELEMETRY ═══════════════ -->
 <img src="./assets/telemetry.svg" width="100%" alt="Status: active — 42 Perpignan — Président du BDE — From fast-food to software engineering"/>
 
-</div>
+<!-- ═══════════════ TERMINAL ═══════════════ -->
+<img src="./assets/terminal.svg" width="100%" alt="whoami: Shawn Petitjean, student @ 42 Perpignan, Président du BDE"/>
 
-```text
-> whoami
-  shawn_petitjean :: student @ 42 Perpignan
-> cat role.txt
-  Président du BDE de 42 Perpignan — events, community & student life.
-> cat mission.txt
-  Ex-fast-food & Point Chaud. Now compiling my way to software engineering.
-  Writing C close to the metal, scripting in Python, breaking & fixing things.
-> _
-```
-
-<div align="center">
 
 <!-- ═══════════════ STACK ═══════════════ -->
-<img src="./assets/stack.svg" width="100%" alt="Stack: C, Python, Shell, Git, Make, Linux"/>
+<img src="./assets/stack.svg" width="100%" alt="Stack: Python (main), C, Shell, Git, Linux"/>
 
 <img src="./assets/divider.svg" width="100%"/>
 
