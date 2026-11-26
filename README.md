@@ -13,12 +13,16 @@
 
 
 <!-- ═══════════════ STACK ═══════════════ -->
-<img src="./assets/stack.svg" width="100%" alt="Stack: Python (main), C, Shell, Git, Linux"/>
+<img src="./assets/stack.svg" width="100%" alt="Stack: Python (main), C, Shell, Git, Linux, Docker"/>
+
+<!-- ═══════════════ LANG.DIST ═══════════════ -->
+<img src="./assets/lang.svg" width="100%" alt="Language distribution: C 55.7%, Python 39.8%, Makefile 3.4%, Shell 0.8%, Dockerfile 0.3%"/>
 
 <img src="./assets/divider.svg" width="100%"/>
 
-<!-- ═══════════════ SIGNAL / STATS ═══════════════ -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shawn-Petitjean&layout=compact&hide_border=true&bg_color=111111&title_color=2EF2C9&text_color=C8C8C8&border_radius=0&custom_title=//%20LANG.DIST" height="170"/>
+<!-- ═══════════════ PROJECTS ═══════════════ -->
+<a href="https://github.com/Shawn-Petitjean/llm-constrained-gen"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Shawn-Petitjean&repo=llm-constrained-gen&hide_border=true&bg_color=111111&title_color=2EF2C9&icon_color=2EF2C9&text_color=C8C8C8&border_radius=0" width="49%"/></a>
+<a href="https://github.com/Shawn-Petitjean/RAG"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Shawn-Petitjean&repo=RAG&hide_border=true&bg_color=111111&title_color=2EF2C9&icon_color=2EF2C9&text_color=C8C8C8&border_radius=0" width="49%"/></a>
 
 <img src="./assets/divider.svg" width="100%"/>
 
